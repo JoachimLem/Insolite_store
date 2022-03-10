@@ -1,0 +1,38 @@
+@font-face {
+  font-family: SantitaOne;
+  src: url(/public/assets/fonts/SansitaOne.ttf);
+}
+
+.landingPage_container{
+  background:url(/public/assets/images/gradienta.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  height:100vh;
+  color: #f8f8f8;
+}
+
+.landingPage_container .title{
+  text-align:center;
+  font-family: Roboto, sans-serif;
+  font-size:8vw;
+}
+
+.landingPage_container .title span{
+  font-family: SansitaOne, serif;
+  background: -webkit-linear-gradient(#0047FF,#BAABFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color:transparent;
+  font-style: italic;
+}
+
+.landingPage{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.landingPage_left{
+  display:flex;
+  flex-direction: column;
+  justify-content:space-between;
+}
