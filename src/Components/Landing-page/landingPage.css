@@ -51,7 +51,11 @@
 
 .landing-right {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+}
+
+.landing-right img{
+  transform: rotate(-4deg);
 }
 
 .discover {
@@ -62,6 +66,7 @@
   padding: 2rem;
   border-radius: 10px;
   cursor: pointer;
+  transition: all 300ms ease-in;
 }
 
 .discover span {
@@ -73,4 +78,5 @@
   font-size: 2rem;
   background-color:#fbbf23;
   color:black;
+ 
 }
