@@ -23,7 +23,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-style: italic;
-  padding:2.5rem;
+  padding: 2.5rem;
 }
 
 .landingPage-container {
@@ -39,13 +39,14 @@
   justify-content: space-between;
 }
 
-.landing-left h2, p {
-  color:#f8f8f8;
+.landing-left h2,
+p {
+  color: #f8f8f8;
   font-family: serif;
 }
 
 .landing-left span {
-  font-family:SantitaOne, serif;
+  font-family: SantitaOne, serif;
   font-size: 2rem;
 }
 
@@ -54,7 +55,7 @@
   justify-content: flex-end;
 }
 
-.landing-right img{
+.landing-right img {
   transform: rotate(-4deg);
 }
 
@@ -73,10 +74,11 @@
   font-family: SantitaOne, serif;
   font-size: 2rem;
 }
+
 .discover:hover {
   font-family: SantitaOne, serif;
   font-size: 2rem;
-  background-color:#fbbf23;
-  color:black;
- 
+  background-color: #fbbf23;
+  color: black;
+
 }
