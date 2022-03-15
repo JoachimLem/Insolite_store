@@ -1,8 +1,13 @@
 import React from 'react';
+import Navbar from '../NavBar/index';
 
 
 const HomePage = () => (
-  <div>Je sui la home page</div>
+  
+  <div>
+    <Navbar />
+    
+  </div>
 );
 
 export default HomePage;

@@ -1,0 +1,36 @@
+/* Navbar Style */
+.navbar{
+  background-color:black;
+  color: #f8f8f8;
+}
+
+
+/* Logo Style */
+.brandLogo{
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.brandLogo span{
+  font-family: SantitaOne, serif;
+  background: -webkit-linear-gradient(#0047FF, #BAABFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+  padding:1rem;
+}
+
+
+/* Menu style */
+.navbar_item {
+  color:#f8f8f8;
+  font-weight:bold;
+  font-size:1.3vw;
+  margin: 0.5rem;
+}
+
+.search_icon{
+  font-family: FontAwesome;
+  width: 25vh;
+  
+}
