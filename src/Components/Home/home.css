@@ -1,0 +1,53 @@
+.homePage {
+  background: url(/public/assets/images/gradienta.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: #f8f8f8;
+}
+
+.homePage_container {
+  margin-top: 50px;
+}
+
+.homePage_title {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 3vw;
+  padding: 1vw 6vw;
+  font-family: SantitaOne, serif;
+
+
+}
+
+.card_container {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card_product{
+  margin: 1rem;
+  border-radius: 20px;
+}
+
+.btn-add-cart, .btn-shop-now{
+  display:block;
+  margin: 0.5rem auto;
+  width: 13vw;
+  font-size: 1.1vw;
+}
+
+.product_title{
+  font-size: 10vw;
+  
+}
+
+.product_price{
+  font-size: 2vw;
+}
+
+.product_description{
+  text-align: center;
+}

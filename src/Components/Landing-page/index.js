@@ -1,6 +1,7 @@
 import React from 'react';
 import './landingPage.css';
-import { Columns, Container } from 'react-bulma-components';
+import { Container, Row, Col, Button, Image } from 'react-bootstrap';
+
 
 
 
@@ -10,38 +11,32 @@ const LandingPage = () => {
 
 
   return (
-    <div className='content landingPage'>
-      <Container className='landingPage-container'>
+    <Container className='container_landingPage' fluid>
 
-        <h1 className='title mb-6'>
-          <span>INSOLITE </span>STORE
-        </h1>
-
-        <Columns>
-          <Columns.Column className='landing-left'>
-            <h2 className='has-text-centered is-size-1'>
-              RETROUVEZ LES OBJETS LES PLUS INSOLITE ET ETRANGE DU WEB
-            </h2>
-            <p className='has-text-justify is-size-4'> Idées cadeaux pour les amis et la famille.
-              Surprenez vos proches par des produits vraiment
-              <span className='insolite'> INSOLITE</span>.
-            </p>
-            <button className='discover'>
-              <span className="icon">
-                <i className="fab fa-github"></i>
-              </span>
-              <span>Découvrir</span></button>
-          </Columns.Column>
+    {/* Titre Site */}
+    <Row>
+      <Col className='brand_title'><span>Insolite</span> Store</Col>
+    </Row>
 
 
-          <Columns.Column className='landing-right'>
-            <img src={process.env.PUBLIC_URL + 'assets/images/tasse_basket.png'} alt='tasse basket' />
-          </Columns.Column>
-        </Columns>
+    {/* Contenu principal de la Landing Page */}
+    <Row className=' h-75'>
+      <Col sm={12} lg={6} className=' pl-5 d-flex flex-column justify-content-around align-items-center h-100' >
+        <h1 className='landingPage__description_title'>RETROUVEZ LES OBJETS LES PLUS INSOLITE ET ETRANGE DU WEB</h1>
+        <p className='landingPage__description_p'>Idées cadeaux pour les amis et la famille. Surprenez vos proches par des produits vraiment <span>INSOLITE !!!</span></p>
+        <Button  size='lg' variant='outline-warning'>Découvrir</Button>
+      </Col>
 
-      </Container>
 
-    </div>
+      <Col sm={12} lg={6} className='d-flex justify-content-center align-items-center'>
+        <Image className='landingPage__description_image' src={process.env.PUBLIC_URL + 'assets/images/tasse_basket.png' }/>
+      </Col>
+    </Row>
+
+
+  </Container>
+
+  
   );
 };
 

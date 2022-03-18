@@ -1,9 +1,4 @@
-@font-face {
-  font-family: SantitaOne;
-  src: url(/public/assets/fonts/SansitaOne.ttf);
-}
-
-.landingPage {
+.container_landingPage {
   background: url(/public/assets/images/gradienta.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -11,13 +6,17 @@
   color: #f8f8f8;
 }
 
-.landingPage .title {
+.brand_title {
   text-align: center;
-  font-size: 8vw;
+  font-size: 10vh;
   color: #f8f8f8;
+  text-shadow: 0px 3px 0px #d3a724,
+    0px 14px 10px rgba(0, 0, 0, 0.15),
+    0px 24px 2px rgba(0, 0, 0, 0.1),
+    0px 34px 30px rgba(0, 0, 0, 0.1);
 }
 
-.landingPage .title span {
+.brand_title span {
   font-family: SantitaOne, serif;
   background: -webkit-linear-gradient(#0047FF, #BAABFF);
   -webkit-background-clip: text;
@@ -26,59 +25,35 @@
   padding: 2.5rem;
 }
 
-.landingPage-container {
-  height: 100%;
-  padding: 1rem;
+.landingPage__description_title {
+  text-align: center;
+  font-family: Poppins, sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 5rem;
+
+  text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
-.landing-left {
-  color: #f8f8f8;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.landingPage__description_p {
+  text-align: center;
+  font-family:Rubik;
+  font-size:2rem;
 }
 
-.landing-left h2,
-p {
-  color: #f8f8f8;
-  font-family: serif;
-}
-
-.landing-left span {
+.landingPage__description_p span {
   font-family: SantitaOne, serif;
-  font-size: 2rem;
+  background: -webkit-linear-gradient(#0047FF, #BAABFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+  padding: 0.2rem;
+  text-shadow: 0px 3px 0px #d3a724,
+  0px 14px 10px rgba(0, 0, 0, 0.15),
+  0px 24px 2px rgba(0, 0, 0, 0.1),
+  0px 34px 30px rgba(0, 0, 0, 0.1);
 }
 
-.landing-right {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.landing-right img {
-  transform: rotate(-4deg);
-}
-
-.discover {
-  display: inline-block;
-  color: #f8f8f8;
-  background-color: black;
-  border: 3px solid #fbbf23;
-  padding: 2rem;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 300ms ease-in;
-}
-
-.discover span {
-  font-family: SantitaOne, serif;
-  font-size: 2rem;
-}
-
-.discover:hover {
-  font-family: SantitaOne, serif;
-  font-size: 2rem;
-  background-color: #fbbf23;
-  color: black;
-
+.landingPage__description_image{
+  transform:rotate(-8deg);
 }
