@@ -6,7 +6,8 @@ import './navbar.css';
 import 'font-awesome/css/font-awesome.min.css';
 //Import Icons
 import { BsFillCartFill, BsPersonCircle } from 'react-icons/bs';
-import { Navbar, Nav, Dropdown } from 'react-bootstrap';
+import { Navbar, Nav, Dropdown, Button } from 'react-bootstrap';
+import LogIn from '../Compte/LogIn';
 
 
 
@@ -14,6 +15,10 @@ import { Navbar, Nav, Dropdown } from 'react-bootstrap';
 const NavBar = () => {
 
   const [category, setCategory] = useState([]);
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   useEffect(() => {
     axios.get(`http://${process.env.REACT_APP_API_CATEGORY}`)
@@ -58,7 +63,7 @@ const NavBar = () => {
 
         {/* Link for profil & cart page */}
         <Nav fill >
-          <Nav.Link as={Link} to='/moncompte'>
+          <Nav.Link as={Button} onClick={handleShow} variant='inherit' to='/moncompte'>
 
             {window.innerWidth > 575 ?
               <BsPersonCircle size='2rem' color='#fff' /> :
@@ -77,7 +82,9 @@ const NavBar = () => {
 
       </Navbar.Collapse>
 
+      <LogIn show={show} onHide={handleClose} />
     </Navbar>
+
 
   );
 };

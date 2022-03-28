@@ -4,7 +4,8 @@ import 'bulma/css/bulma.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LandingPage from './Components/Landing-page';
 import HomePage from './Components/Home';
-import NotFoundPage from './Components/404/index';
+import NotFoundPage from './Components/404';
+import LoginPage from './Components/Compte/LogIn';
 
 
 
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
         <Route exact path="/home" element={<HomePage />} />
+        <Route exact path="/moncompte" element={<LoginPage />} />
 
 
 
