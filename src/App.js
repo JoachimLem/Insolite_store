@@ -16,7 +16,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
         <Route exact path="/home" element={<HomePage />} />
-
+        <Route path='*'> 404 J'ai pas trouvé</Route>
       </Routes>
 
 
