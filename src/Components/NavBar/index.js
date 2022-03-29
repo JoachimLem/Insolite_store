@@ -15,10 +15,17 @@ import LogIn from '../Compte/LogIn';
 const NavBar = () => {
 
   const [category, setCategory] = useState([]);
+
   const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleClose = () => {
+    setShow(false);
+  }
+
+  const handleShow = () => {
+    console.log(show)
+    setShow(true);
+  }
 
   useEffect(() => {
     axios.get(`http://${process.env.REACT_APP_API_CATEGORY}`)
@@ -82,7 +89,10 @@ const NavBar = () => {
 
       </Navbar.Collapse>
 
-      <LogIn show={show}  />
+      <LogIn
+        show={show}
+        handleClose={handleClose} 
+        />
     </Navbar>
 
 

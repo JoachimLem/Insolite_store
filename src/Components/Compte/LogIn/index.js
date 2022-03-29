@@ -1,27 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Modal, Button, InputGroup, FormControl, Form, Row, Col } from 'react-bootstrap';
 
 
-const LogIn = ({ show }) => {
-
-  const [modalShow, setModalShow] = useState(show)
-
-
+const LogIn = ( props ) => {
  
-
-  const handleClose = () => {
-    console.log(modalShow);
-  setModalShow(false);
-    console.log(modalShow);
-  };
-
-
 
   return (
     <>
-
-
-      <Modal show={show} onHide={handleClose} centered >
+      <Modal show={props.show} onHide={props.handleClose} centered >
 
         <Modal.Header closeButton>
           <Modal.Title>Connexion</Modal.Title>
@@ -72,7 +58,7 @@ const LogIn = ({ show }) => {
                 variant="outline-warning"
                 size="lg"
                 type='submit'
-                onClick={handleClose}>
+                onClick={props.handleClose}>
                 Connexion
               </Button>
             </Col>
