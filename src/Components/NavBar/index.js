@@ -82,7 +82,7 @@ const NavBar = () => {
 
       </Navbar.Collapse>
 
-      <LogIn show={show} onHide={handleClose} />
+      <LogIn show={show}  />
     </Navbar>
 
 
