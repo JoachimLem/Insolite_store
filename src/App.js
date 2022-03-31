@@ -6,6 +6,7 @@ import LandingPage from './Components/Landing-page';
 import HomePage from './Components/Home';
 import NotFoundPage from './Components/404';
 import LoginPage from './Components/Compte/LogIn';
+import SignUpPage from './Components/Compte/SignUp';
 
 
 
@@ -17,6 +18,8 @@ function App() {
         <Route exact path="/" element={<LandingPage />} />
         <Route exact path="/home" element={<HomePage />} />
         <Route exact path="/moncompte" element={<LoginPage />} />
+        <Route exact path="/inscription" element={<SignUpPage />} />
+
 
 
 

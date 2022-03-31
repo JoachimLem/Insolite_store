@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Modal, Button, InputGroup, FormControl, Form, Row, Col } from 'react-bootstrap';
 
 
@@ -44,7 +45,7 @@ const LogIn = ( props ) => {
                 <Form.Check type="checkbox" label={`Se souvenir de moi`} id='check-me' />
               </Col>
               <Col sm={6} className='d-flex justify-content-center'>
-                <a href='#'>Mot de passe perdu ?</a>
+                <Link to='/newpassword'>Mot de passe perdu ?</Link>
 
               </Col>
             </Row>
@@ -68,7 +69,7 @@ const LogIn = ( props ) => {
 
 
         <Modal.Footer className="justify-content-center">
-          <p>Vous n'avez pas encore de compte ? <a href="#">S'inscrire</a></p>
+          <p>Vous n'avez pas encore de compte ? <Link to="/inscription">S'inscrire</Link></p>
         </Modal.Footer>
 
       </Modal>
