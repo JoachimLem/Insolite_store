@@ -70,7 +70,7 @@ const NavBar = () => {
 
         {/* Link for profil & cart page */}
         <Nav fill >
-          <Nav.Link as={Button} onClick={handleShow} variant='inherit' to='/moncompte'>
+          <Nav.Link as={Button}  onClick={handleShow} variant='inherit' to='/moncompte'>
 
             {window.innerWidth > 575 ?
               <BsPersonCircle size='2rem' color='#fff' /> :

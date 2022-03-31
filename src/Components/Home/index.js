@@ -7,7 +7,7 @@ import CardProduct from '../CardProduct';
 
 const HomePage = () => (
 
-  <div className=' content homePage'>
+  <section className=' content homePage'>
     <Navbar />
     <Block className='homePage_title'>
       <p>Bienvenue chez vous, retrouvez les produits du moment qui font le buzz sur internet.</p>
@@ -20,7 +20,7 @@ const HomePage = () => (
 
     </Container>
 
-  </div>
+  </section>
 );
 
 export default HomePage;
