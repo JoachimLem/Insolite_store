@@ -8,6 +8,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import { BsFillCartFill, BsPersonCircle } from 'react-icons/bs';
 import { Navbar, Nav, Dropdown, Button } from 'react-bootstrap';
 import LogIn from '../Compte/LogIn';
+import { useCookies } from 'react-cookie';
 
 
 
@@ -17,6 +18,9 @@ const NavBar = () => {
   const [category, setCategory] = useState([]);
 
   const [show, setShow] = useState(false);
+
+  const [cookies, setCookies] = useCookies(['name']);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleClose = () => {
     setShow(false);
@@ -28,12 +32,18 @@ const NavBar = () => {
   }
 
   useEffect(() => {
+    if (cookies.name!==undefined){
+      setIsLoggedIn(true)
+    }
+  },[cookies.name]);
+
+  useEffect(() => {
     axios.get(`http://${process.env.REACT_APP_API_CATEGORY}`)
       .then((response) => {
         setCategory(response.data.data);
         console.log(category);
       });
-  }, []);
+  },[cookies]);
 
   return (
 
@@ -70,12 +80,23 @@ const NavBar = () => {
 
         {/* Link for profil & cart page */}
         <Nav fill >
+          { isLoggedIn === true ?
+            
+              <Nav.Link as="span" style={{ "backgroundColor":"red", "borderRadius":"50%", "width":"32px", "height":"32px"}}>
+                {cookies.name}
+              </Nav.Link>
+
+       :
+
           <Nav.Link as={Button}  onClick={handleShow} variant='inherit' to='/moncompte'>
 
             {window.innerWidth > 575 ?
               <BsPersonCircle size='2rem' color='#fff' /> :
               'Mon Compte'}
           </Nav.Link>
+            
+
+          }
 
 
 
